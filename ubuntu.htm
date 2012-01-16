@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.sdslabs.co.in/css/css/bootstrap/1.4.0/bootstrap.min.css" />
+	<title>Ubuntu 11.10 Oneiric Oncelot Installation</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<h2>Steps</h2>
+		<p>Partitioning <br />
+		Read the article on <a href="http://www.pcguide.com/ref/hdd/file/structPartitions-c.html">partitions</a>. <br />
+		One can have a maximum of four partitions on a hard disk. If more are to be made, a pseudo partition (called extended partition) which can contain any number of partitions inside, has to be made.
+		In our installations 2 additional partitions will be made. One will be for swap which is similar to <a href="http://www.google.co.in/?q=pagefile.sys">pagefile.sys</a> in windows and the other will be root. 
+		</p>
+		
+		<h3>Booting & Installation</h3>
+		<ul>
+		<p>
+		<li>Download Unetbootin from <a href="http://unetbootin.sourceforge.net/" target=_blank>here</a>. </li>
+		<li>You'll need an empty usb drive which shall now be created into a bootable drive. Choose "Diskimage" and select the .iso file of Ubuntu 11.10. Create the drive. </li><br /> <br />
+		<img src="images/unetbootin.jpg" alt="Unetbootin"> <br /><br /> 
+		<li>Insert the usb drive and reboot. Press F9 or F12 (depending on manufacturer) to change boot order into usb.</li>
+		<li>Select default option when blue list loads and wait for Ubuntu to boot. </li>
+		<li>Open "install ubuntu" shortcut and press continue till you reach "Installation type". Now select "something else". </li>
+		<li>Select the partition that you predecided for swap and click on "Change". Select "Use as" option as "swap area". Click on ok. </li>
+		<li>Now select the partition that you want to make the root partiton and click on "Change". Now select "Ext4 Journalling file system" for "Use as". 
+		Tick format the partition. Select "/" as your mount point.
+		This will be your root partition. </li>
+		<li>(Optional)</li>
+		<li>You may also want to auto-mount your ntfs partitions (C and D drives) at boot. To do this select one of your ntfs partitions, 
+		click on "Change", set "Use as" to "ntfs" <span class="label warning">Warning</span> don't tick on "Format the partition" option otherwise your data will be roast! </li>
+		<li>Type "/media/c" (without quotes) in "Mount point". C is your drive here.
+		You may replace c by anything you want but don't keep same mount point for different partitons eg c and d drive. </li>
+		<li>Do this for your other ntfs partitions too. Now you are ready to install Ubuntu! <br />
+		Click on install now. Go have coffee till it installs. Next time it boots, you'll have your new Ubuntu ready to ride!</li>
+		</ul>
+		</p>	
+	</div>
+</body>
